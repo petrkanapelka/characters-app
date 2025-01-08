@@ -1,13 +1,16 @@
 import { Character } from '@/assets/types/types';
 import Image from 'next/image';
 import React from 'react';
+import styles from './CharacterCard.module.css'
+
 type CharacterCardType = {
     character: Character
 }
+
 const CharacterCard = (props: CharacterCardType) => {
     const { character } = props
     return (
-        <div >
+        <div className={styles['character-card']}>
             <div >{character.name}</div>
             <Image
                 src={character.image}

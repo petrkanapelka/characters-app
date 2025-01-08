@@ -1,0 +1,30 @@
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f456c5;
+    color: rgb(246, 245, 242);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-15px) scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.character-card img {
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.character-card div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(246, 245, 242);
+    text-align: center;
+    margin-top: 8px;
+}
