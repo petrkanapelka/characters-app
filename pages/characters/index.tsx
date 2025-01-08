@@ -1,5 +1,5 @@
 import { useCharacters } from '@/assets/hooks/useCharacters'
-import Image from 'next/image'
+import CharacterCard from '@/components/character-card/CharacterCard'
 import React, { } from 'react'
 
 
@@ -13,15 +13,7 @@ export default function Characters() {
             <h2>Characters</h2>
             <div>
                 {characters && characters.map((character) => {
-                    return <div key={character.id}>
-                        <div >{character.name}</div>
-                        <Image
-                            src={character.image}
-                            alt={`Picture of ${character.name}`}
-                            width={200}
-                            height={200}
-                        />
-                    </div>
+                    return <CharacterCard character={character} key={character.id} />
                 })}
             </div>
         </div>
