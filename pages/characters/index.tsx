@@ -1,24 +1,16 @@
-import axios from 'axios'
+import { useCharacters } from '@/assets/hooks/useCharacters'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { } from 'react'
 
-type Character = {
-    id: string
-    name: string
-    image: string
-}
+
 
 export default function Characters() {
-    const [characters, setCharacters] = useState<null | Character[]>(null)
-    useEffect(() => {
-        axios.get("https://rickandmortyapi.com/api/character")
-            .then(res => {
-                setCharacters(res.data.results)
-            })
-    }, [])
+
+    const characters = useCharacters()
+
     return (
         <div>
-            <h2>CHARACTERS</h2>
+            <h2>Characters</h2>
             <div>
                 {characters && characters.map((character) => {
                     return <div key={character.id}>
