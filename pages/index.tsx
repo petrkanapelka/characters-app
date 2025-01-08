@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import MetaHead from "@/components/meta-head/MetaHead";
+import Navbar from "@/components/navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <MetaHead title="Create Next App"/>
+      <Navbar/>
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
